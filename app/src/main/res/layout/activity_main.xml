@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.textfield.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
 
     <TextView
-<<<<<<< HEAD
         android:id="@+id/app_name"
         style="@style/text_display"
         android:layout_width="match_parent"
@@ -17,6 +16,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    
+
     
     <com.google.android.material.textfield.TextInputLayout
 
@@ -28,34 +29,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_name">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
-=======
-        android:id="@+id/judul"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="My First Application"
-        android:textAlignment="textStart"
-        android:textSize="23dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="6dp"
-        android:textColor="@color/white"
-        android:background="@color/material_dynamic_tertiary30"
-         />
->>>>>>> e50fc27675a9a90a14e3236b4bbf81a3e1eb4685
 
-    <TextView
-        android:id="@+id/judul2"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_wrapper"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome to The First Mobile Application"
-        android:layout_below="@id/judul"
-        android:textAlignment="center"
-        android:layout_marginTop="30dp"
-        />
+        style="@style/text_input"
+        android:hint="Input your student number..."
+        android:layout_below="@id/name_wrapper"
+        android:layout_marginTop="20dp">
 
-</RelativeLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="fill_parent"
+        android:padding="2dp"
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_below="@id/email_wrapper"
+        android:layout_marginTop="20dp"
+
+        android:layout_centerHorizontal="true"/>
+</com.google.android.material.textfield.TextInputLayout>
+
